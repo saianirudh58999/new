@@ -36,7 +36,7 @@ def get_book(book_id):
 @app.route('/books', methods=['POST'])
 def create_book():
     new_book = {
-        'id': len(books),
+        'id': len(books)+1,
         'title': request.json['title'],
         'author': request.json['author'],
         'publication_year': request.json['publication_year']
